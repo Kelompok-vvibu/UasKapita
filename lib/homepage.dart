@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uas_kapitaselekta/caramencegah.dart';
 import 'package:uas_kapitaselekta/covid19.dart';
 import 'dart:async';
 import 'dart:convert';
@@ -351,7 +352,7 @@ class _HomePageState extends State<HomePage> {
                           onTap: () {
                             Navigator.push(context,
                                 MaterialPageRoute(builder: (context) {
-                              return Rujukan();
+                              return Mencegah();
                             }));
                           },
                           child: Center(
