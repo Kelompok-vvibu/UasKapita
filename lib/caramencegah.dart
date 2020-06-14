@@ -60,7 +60,7 @@ class _MencegahState extends State<Mencegah> {
                           children: <Widget>[
                             Text("CARA MENCEGAH VIRUS CORONA",
                               style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 19,
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
                               ),),
@@ -136,7 +136,7 @@ class _MencegahState extends State<Mencegah> {
 
                   Text("Bersihkan tangan Anda secara rutin. Gunakan sabun dan air, atau cairan pembersih tangan berbahan alkohol.",
                     style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 14,
                       color: Colors.white,
                       height: 1,
                     ),
@@ -290,9 +290,9 @@ class _MencegahState extends State<Mencegah> {
                       fontWeight: FontWeight.bold,
                     ),),
 
-                  Text("CTetaplah di rumah jika Anda merasa tidak enak badan. Jika Anda demam, batuk, atau kesulitan bernapas segera cari bantuan medis. Hubungi terlebih dahulu. ",
+                  Text("Tetaplah di rumah jika Anda merasa tidak enak badan. Jika Anda demam, batuk, atau kesulitan bernapas segera cari bantuan medis. Hubungi terlebih dahulu. ",
                     style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 13,
                       color: Colors.white,
                       height: 1,
                     ),
@@ -303,35 +303,6 @@ class _MencegahState extends State<Mencegah> {
                 ],
               ),
             ),
-
-
-
-
-
-            Container(
-              decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white,width: 5.0,),
-                  borderRadius: BorderRadius.circular(5),
-                  gradient: LinearGradient(
-                      colors: [Colors.amberAccent, Colors.amber],
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter)),
-              height: 70,
-              width: 130,
-              margin: EdgeInsets.fromLTRB(2, 20, 2, 20),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Text("TEST COVID - 19",
-                      style: TextStyle(
-                        color: Colors.white,fontWeight: FontWeight.bold,
-                        fontSize: 20,)),
-                ],
-              ),
-            ),
-
-            //container baru
-
           ],
         ),
 
