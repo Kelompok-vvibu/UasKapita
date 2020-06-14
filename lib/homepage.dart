@@ -65,7 +65,7 @@ class _HomePageState extends State<HomePage> {
                           bottomLeft: Radius.circular(5.0),
                           bottomRight: Radius.circular(10.0)),
                       image: DecorationImage(
-                          image: AssetImage('asset/bg-appbar.png'),
+                          image: AssetImage('asset/homepage.png'),
                           fit: BoxFit.cover),
                     ),
                     height: divheight / 1 * 0.3,
