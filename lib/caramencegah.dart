@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:bordered_text/bordered_text.dart';
 
 class Mencegah extends StatefulWidget {
   @override
@@ -7,14 +7,11 @@ class Mencegah extends StatefulWidget {
 }
 
 class _MencegahState extends State<Mencegah> {
-
-
   @override
   Widget build(BuildContext context) {
-    
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(),
-      body:  Container(
+      body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
@@ -30,63 +27,27 @@ class _MencegahState extends State<Mencegah> {
             ],
           ),
         ),
-
-
         child: ListView(
           children: <Widget>[
             Container(
               child: Column(
                 children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.black12,
-
-                    ),
-                    child: Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.white,width: 5.0,),
-                            borderRadius: BorderRadius.circular(5),
-                            gradient: LinearGradient(
-                                colors: [Colors.orangeAccent, Colors.deepOrangeAccent],
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter)),
-                        height: 70,
-                        width: 350,
-                        margin: EdgeInsets.fromLTRB(2, 20, 2, 20),
-                        child: Column(
-
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Text("CARA MENCEGAH VIRUS CORONA",
-                              style: TextStyle(
-                                fontSize: 19,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                              ),),
-
-                          ],
-                        ),
-                      ),
-
-
-
-
-                    ]),
+                  Image(
+                    image: AssetImage('asset/cegahCorona.png'),
                   ),
-
 
                   // dibawah ini container baru di dalam column
 
                   Positioned(
                     bottom: 260,
                     child: Container(
+                      padding: EdgeInsets.all(10.0),
                       width: MediaQuery.of(context).size.width,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
-
-                          Text("Lindungi diri dan orang lain di sekitar Anda dengan mengetahui fakta-fakta terkait virus ini dan mengambil langkah pencegahan yang sesuai. Ikuti saran yang diberikan oleh badan kesehatan publik lokal Anda.",
+                          Text(
+                            "Lindungi diri dan orang lain di sekitar Anda dengan mengetahui fakta-fakta terkait virus ini dan mengambil langkah pencegahan yang sesuai. Ikuti saran yang diberikan oleh badan kesehatan publik lokal Anda.",
                             style: TextStyle(
                               fontSize: 15,
                               color: Colors.white,
@@ -94,218 +55,420 @@ class _MencegahState extends State<Mencegah> {
                             ),
                             textAlign: TextAlign.center,
                           ),
-
                         ],
                       ),
                     ),
                   ),
 
                   //masih bisa di isi container column
-
                 ],
               ),
-
             ),
-
 
             //Container baru diluar column
 
-            Container(
-              padding: EdgeInsets.all(5),
-              decoration: BoxDecoration(
-                  border: Border.all(color: Colors.blueAccent,width: 5.0,),
-                  borderRadius: BorderRadius.circular(5),
-                  gradient: LinearGradient(
-                      colors: [Colors.indigo, Colors.deepPurple],
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter)),
-              height: 90,
-              width: 130,
-              margin: EdgeInsets.fromLTRB(2, 20, 2, 20),
-
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-
-                  Text("MENCUCI TANGAN LEBIH SERING",
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),),
-
-                  Text("Bersihkan tangan Anda secara rutin. Gunakan sabun dan air, atau cairan pembersih tangan berbahan alkohol.",
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.white,
-                      height: 1,
+            Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Container(
+                child: FittedBox(
+                  child: Material(
+                    color: Colors.white,
+                    elevation: 14.0,
+                    borderRadius: BorderRadius.circular(24.0),
+                    shadowColor: Colors.black12,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.white,
+                            width: 10.0,
+                          ),
+                          gradient: LinearGradient(
+                              colors: [Colors.orange, Colors.orangeAccent],
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter)),
+                      child: Row(
+                        children: <Widget>[
+                          Container(
+                              child: Padding(
+                            padding: const EdgeInsets.only(left: 5.0),
+                            child: Column(
+                              children: <Widget>[
+                                BorderedText(
+                                  strokeWidth: 2.0,
+                                  child: Text(
+                                    "MENCUCI TANGAN LEBIH SERING",
+                                    style: TextStyle(
+                                      fontSize: 30,
+                                      color: Colors.yellowAccent,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                                Text(
+                                  "Bersihkan tangan Anda secara rutin.",
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                    color: Colors.white,
+                                    height: 1,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                                Text(
+                                  "Gunakan sabun dan air, atau ",
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                    color: Colors.white,
+                                    height: 1,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                                Text(
+                                  "cairan pembersih tangan berbahan alkohol.",
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                    color: Colors.white,
+                                    height: 1,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          )),
+                          Container(
+                            width: 200,
+                            height: 200,
+                            child: ClipRect(
+                              child: Image(
+                                image: AssetImage('asset/hello.png'),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
-                    textAlign: TextAlign.center,
                   ),
-
-
-                ],
+                ),
               ),
             ),
 
+            //-----------------------------------------------------------------
 
-            Container(
-              padding: EdgeInsets.all(5),
-              decoration: BoxDecoration(
-                  border: Border.all(color: Colors.blueAccent,width: 5.0,),
-                  borderRadius: BorderRadius.circular(5),
-                  gradient: LinearGradient(
-                      colors: [Colors.indigo, Colors.deepPurple],
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter)),
-              height: 90,
-              width: 130,
-              margin: EdgeInsets.fromLTRB(2, 20, 2, 20),
-
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-
-                  Text("MENJAGA JARAK AMAN",
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),),
-
-                  Text("Selalu jaga jarak yang aman dengan orang yang batuk atau bersin.",
-                    style: TextStyle(
-                      fontSize: 15,
-                      color: Colors.white,
-                      height: 1,
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                child: FittedBox(
+                  child: Material(
+                    color: Colors.white,
+                    elevation: 14.0,
+                    borderRadius: BorderRadius.circular(24.0),
+                    shadowColor: Colors.black12,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.white,
+                            width: 10.0,
+                          ),
+                          gradient: LinearGradient(
+                              colors: [Colors.indigo, Colors.deepPurple],
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter)),
+                      child: Row(
+                        children: <Widget>[
+                          Container(
+                              child: Padding(
+                            padding: const EdgeInsets.only(left: 16.0),
+                            child: Column(
+                              children: <Widget>[
+                                Text(
+                                  "MENJAGA JARAK AMAN",
+                                  style: TextStyle(
+                                    fontSize: 30,
+                                    color: Colors.orange,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "Selalu jaga jarak yang aman dengan orang",
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                    color: Colors.white,
+                                    height: 1,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                                Text(
+                                  "yang batuk atau bersin. ",
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                    color: Colors.white,
+                                    height: 1,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          )),
+                          Container(
+                            width: 200,
+                            height: 200,
+                            child: ClipRect(
+                              child: Image(
+                                image: AssetImage('asset/hello.png'),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
-                    textAlign: TextAlign.center,
                   ),
-
-
-                ],
+                ),
               ),
             ),
 
+            //-----------------------------------------------------------------
 
-            Container(
-              padding: EdgeInsets.all(5),
-              decoration: BoxDecoration(
-                  border: Border.all(color: Colors.blueAccent,width: 5.0,),
-                  borderRadius: BorderRadius.circular(5),
-                  gradient: LinearGradient(
-                      colors: [Colors.indigo, Colors.deepPurple],
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter)),
-              height: 90,
-              width: 130,
-              margin: EdgeInsets.fromLTRB(2, 20, 2, 20),
-
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-
-                  Text("JANGAN MENYENTUH WAJAH",
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),),
-
-                  Text("Jangan sentuh mata, hidung, atau mulut Anda.",
-                    style: TextStyle(
-                      fontSize: 15,
-                      color: Colors.white,
-                      height: 1,
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                child: FittedBox(
+                  child: Material(
+                    color: Colors.white,
+                    elevation: 14.0,
+                    borderRadius: BorderRadius.circular(24.0),
+                    shadowColor: Colors.black12,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.white,
+                            width: 10.0,
+                          ),
+                          gradient: LinearGradient(
+                              colors: [Colors.indigo, Colors.deepPurple],
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter)),
+                      child: Row(
+                        children: <Widget>[
+                          Container(
+                              child: Padding(
+                            padding: const EdgeInsets.only(left: 16.0),
+                            child: Column(
+                              children: <Widget>[
+                                Text(
+                                  "JANGAN MENYENTUH WAJAH",
+                                  style: TextStyle(
+                                    fontSize: 30,
+                                    color: Colors.orange,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "Jangan sentuh mata, hidung, atau mulut Anda.",
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                    color: Colors.white,
+                                    height: 1,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          )),
+                          Container(
+                            width: 200,
+                            height: 200,
+                            child: ClipRect(
+                              child: Image(
+                                image: AssetImage('asset/hello.png'),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
-                    textAlign: TextAlign.center,
                   ),
-
-
-                ],
+                ),
               ),
             ),
 
+            //-----------------------------------------------------------------
 
-            Container(
-              padding: EdgeInsets.all(5),
-              decoration: BoxDecoration(
-                  border: Border.all(color: Colors.blueAccent,width: 5.0,),
-                  borderRadius: BorderRadius.circular(5),
-                  gradient: LinearGradient(
-                      colors: [Colors.indigo, Colors.deepPurple],
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter)),
-              height: 90,
-              width: 130,
-              margin: EdgeInsets.fromLTRB(2, 20, 2, 20),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                child: FittedBox(
+                  child: Material(
+                    color: Colors.white,
+                    elevation: 14.0,
+                    borderRadius: BorderRadius.circular(24.0),
+                    shadowColor: Colors.black12,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.white,
+                            width: 10.0,
+                          ),
+                          gradient: LinearGradient(
+                              colors: [Colors.indigo, Colors.deepPurple],
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter)),
+                      child: Row(
+                        children: <Widget>[
+                          Container(
+                              child: Padding(
+                            padding: const EdgeInsets.only(left: 16.0),
+                            child: Column(
+                              children: <Widget>[
+                                Text(
+                                  "MENUTUP MULUT DENGAN SIKU",
+                                  style: TextStyle(
+                                    fontSize: 30,
+                                    color: Colors.orange,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "Saat Anda batuk atau bersin,",
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                    color: Colors.white,
+                                    height: 1,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                                Text(
+                                  "tutup mulut dan hidung dengan lengan anda",
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                    color: Colors.white,
+                                    height: 1,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                                Text(
+                                  "atau tisu.",
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                    color: Colors.white,
+                                    height: 1,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          )),
 
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
+                          //-----------------------------------------------------------------
 
-                  Text("MENUTUP MULUT DENGAN SIKU",
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),),
-
-                  Text("Saat Anda batuk atau bersin, tutup mulut dan hidung dengan lengan Anda atau tisu.",
-                    style: TextStyle(
-                      fontSize: 15,
-                      color: Colors.white,
-                      height: 1,
+                          Container(
+                            width: 200,
+                            height: 200,
+                            child: ClipRect(
+                              child: Image(
+                                image: AssetImage('asset/hello.png'),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
-                    textAlign: TextAlign.center,
                   ),
-
-
-                ],
+                ),
               ),
             ),
 
+            //-----------------------------------------------------------------
 
-            Container(
-              padding: EdgeInsets.all(5),
-              decoration: BoxDecoration(
-                  border: Border.all(color: Colors.blueAccent,width: 5.0,),
-                  borderRadius: BorderRadius.circular(5),
-                  gradient: LinearGradient(
-                      colors: [Colors.indigo, Colors.deepPurple],
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter)),
-              height: 90,
-              width: 130,
-              margin: EdgeInsets.fromLTRB(2, 20, 2, 20),
-
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-
-                  Text("TETAP DIRUMAH",
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),),
-
-                  Text("Tetaplah di rumah jika Anda merasa tidak enak badan. Jika Anda demam, batuk, atau kesulitan bernapas segera cari bantuan medis. Hubungi terlebih dahulu. ",
-                    style: TextStyle(
-                      fontSize: 13,
-                      color: Colors.white,
-                      height: 1,
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                child: FittedBox(
+                  child: Material(
+                    color: Colors.white,
+                    elevation: 14.0,
+                    borderRadius: BorderRadius.circular(24.0),
+                    shadowColor: Colors.black12,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.white,
+                            width: 10.0,
+                          ),
+                          gradient: LinearGradient(
+                              colors: [Colors.indigo, Colors.deepPurple],
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter)),
+                      child: Row(
+                        children: <Widget>[
+                          Container(
+                              child: Padding(
+                            padding: const EdgeInsets.only(left: 16.0),
+                            child: Column(
+                              children: <Widget>[
+                                Text(
+                                  "TETAP DIRUMAH",
+                                  style: TextStyle(
+                                    fontSize: 30,
+                                    color: Colors.orange,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "Tetaplah di rumah",
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                    color: Colors.white,
+                                    height: 1,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                                Text(
+                                  "jika Anda merasa tidak enak badan.",
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                    color: Colors.white,
+                                    height: 1,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                                Text(
+                                  "Jika Anda demam, batuk, atau kesulitan bernapas",
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                    color: Colors.white,
+                                    height: 1,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                                Text(
+                                  "segera hubungi medis.",
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                    color: Colors.white,
+                                    height: 1,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          )),
+                          Container(
+                            width: 200,
+                            height: 200,
+                            child: ClipRect(
+                              child: Image(
+                                image: AssetImage('asset/hello.png'),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
-                    textAlign: TextAlign.center,
                   ),
-
-
-                ],
+                ),
               ),
             ),
           ],
         ),
-
       ),
     );
   }

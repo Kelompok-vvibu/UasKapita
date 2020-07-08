@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:uas_kapitaselekta/database/riwayat.dart';
 import 'class.dart';
 import 'package:clipboard/clipboard.dart';
 

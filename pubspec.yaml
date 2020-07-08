@@ -35,6 +35,8 @@ dependencies:
   sqflite: any
   path_provider: any
   clipboard: any
+  google_fonts: ^1.1.0
+  bordered_text: ^1.0.0
 
 dev_dependencies:
   flutter_test:
