@@ -60,6 +60,9 @@ flutter:
     - asset/background1.jpg
     - asset/call2.png
     - asset/homepage.png
+    - asset/hello.png
+    - asset/cegahCorona.png
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
