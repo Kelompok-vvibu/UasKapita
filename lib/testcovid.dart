@@ -28,22 +28,14 @@ class _TestCovidState extends State<TestCovid> {
   var _pertanyaan = [
     {
       'textPertanyaan':
-          '1. Apakah anda terdapat demam dengan suhu di ata 38 derajat Celcius?',
+          'Apakah anda terdapat demam dengan suhu di ata 38 derajat Celcius?',
       'textJawab': [
         {'teks': 'Iya', 'hasil': 20},
         {'teks': 'Tidak', 'hasil': 0}
       ]
     },
     {
-      'textPertanyaan': '2. apakah anda batuk?',
-      'textJawab': [
-        {'teks': 'Iya', 'hasil': 20},
-        {'teks': 'Tidak', 'hasil': 0}
-      ]
-    },
-    {
-      'textPertanyaan':
-          '3. apakah anda merasakan sesak nafas  sampai merasa kesulitan untuk berbicara?',
+      'textPertanyaan': 'apakah anda batuk?',
       'textJawab': [
         {'teks': 'Iya', 'hasil': 20},
         {'teks': 'Tidak', 'hasil': 0}
@@ -51,7 +43,7 @@ class _TestCovidState extends State<TestCovid> {
     },
     {
       'textPertanyaan':
-          '4.  apa terdapat riwayat kontak(Misalnya: berjabat tangan, mengobrol lama, berada dalam satu ruangan) dengan orang yang sudah diyatakan positif terinfeksi virus Corona?',
+          'apakah anda merasakan sesak nafas  sampai merasa kesulitan untuk berbicara?',
       'textJawab': [
         {'teks': 'Iya', 'hasil': 20},
         {'teks': 'Tidak', 'hasil': 0}
@@ -59,7 +51,15 @@ class _TestCovidState extends State<TestCovid> {
     },
     {
       'textPertanyaan':
-          '5. apakah ada kontak( Misalnya: berjabat tangan, mengobrol lama, berada dalam satu ruangan) dengan orang yang memiki gejala flu, yaitu demam, batuk dan pilek atau dengan orang yang diduga terinfeksi virus Corona?',
+          'apa terdapat riwayat kontak(Misalnya: berjabat tangan, mengobrol lama, berada dalam satu ruangan) dengan orang yang sudah diyatakan positif terinfeksi virus Corona?',
+      'textJawab': [
+        {'teks': 'Iya', 'hasil': 20},
+        {'teks': 'Tidak', 'hasil': 0}
+      ]
+    },
+    {
+      'textPertanyaan':
+          'apakah ada kontak( Misalnya: berjabat tangan, mengobrol lama, berada dalam satu ruangan) dengan orang yang memiki gejala flu, yaitu demam, batuk dan pilek atau dengan orang yang diduga terinfeksi virus Corona?',
       'textJawab': [
         {'teks': 'Iya', 'hasil': 20},
         {'teks': 'Tidak', 'hasil': 0}
@@ -70,11 +70,6 @@ class _TestCovidState extends State<TestCovid> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          floatingActionButton: FloatingActionButton(
-            onPressed: () {},
-            child: Icon(Icons.check_circle),
-            backgroundColor: Colors.blue,
-          ),
           appBar: AppBar(
             title: Text("Test Covid-19"),
           ),

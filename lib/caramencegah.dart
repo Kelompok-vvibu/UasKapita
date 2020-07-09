@@ -41,6 +41,7 @@ class _MencegahState extends State<Mencegah> {
                   Positioned(
                     bottom: 260,
                     child: Container(
+                      color: Colors.black26,
                       padding: EdgeInsets.all(10.0),
                       width: MediaQuery.of(context).size.width,
                       child: Column(
@@ -68,7 +69,7 @@ class _MencegahState extends State<Mencegah> {
             //Container baru diluar column
 
             Padding(
-              padding: const EdgeInsets.all(5.0),
+              padding: const EdgeInsets.all(10.0),
               child: Container(
                 child: FittedBox(
                   child: Material(
@@ -83,7 +84,7 @@ class _MencegahState extends State<Mencegah> {
                             width: 10.0,
                           ),
                           gradient: LinearGradient(
-                              colors: [Colors.orange, Colors.orangeAccent],
+                              colors: [Colors.indigo, Colors.deepPurple],
                               begin: Alignment.topCenter,
                               end: Alignment.bottomCenter)),
                       child: Row(
@@ -94,7 +95,7 @@ class _MencegahState extends State<Mencegah> {
                             child: Column(
                               children: <Widget>[
                                 BorderedText(
-                                  strokeWidth: 2.0,
+                                  strokeWidth: 5.0,
                                   child: Text(
                                     "MENCUCI TANGAN LEBIH SERING",
                                     style: TextStyle(
@@ -104,42 +105,51 @@ class _MencegahState extends State<Mencegah> {
                                     ),
                                   ),
                                 ),
-                                Text(
-                                  "Bersihkan tangan Anda secara rutin.",
-                                  style: TextStyle(
-                                    fontSize: 25,
-                                    color: Colors.white,
-                                    height: 1,
+                                BorderedText(
+                                  strokeWidth: 4.0,
+                                  child: Text(
+                                    "Bersihkan tangan Anda secara rutin.",
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      color: Colors.white,
+                                      height: 1,
+                                    ),
+                                    textAlign: TextAlign.center,
                                   ),
-                                  textAlign: TextAlign.center,
                                 ),
-                                Text(
-                                  "Gunakan sabun dan air, atau ",
-                                  style: TextStyle(
-                                    fontSize: 25,
-                                    color: Colors.white,
-                                    height: 1,
+                                BorderedText(
+                                  strokeWidth: 4.0,
+                                  child: Text(
+                                    "Gunakan sabun dan air, atau ",
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      color: Colors.white,
+                                      height: 1,
+                                    ),
+                                    textAlign: TextAlign.center,
                                   ),
-                                  textAlign: TextAlign.center,
                                 ),
-                                Text(
-                                  "cairan pembersih tangan berbahan alkohol.",
-                                  style: TextStyle(
-                                    fontSize: 25,
-                                    color: Colors.white,
-                                    height: 1,
+                                BorderedText(
+                                  strokeWidth: 4.0,
+                                  child: Text(
+                                    "cairan pembersih tangan berbahan alkohol.",
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      color: Colors.white,
+                                      height: 1,
+                                    ),
+                                    textAlign: TextAlign.center,
                                   ),
-                                  textAlign: TextAlign.center,
                                 ),
                               ],
                             ),
                           )),
                           Container(
-                            width: 200,
-                            height: 200,
+                            width: 150,
+                            height: 150,
                             child: ClipRect(
                               child: Image(
-                                image: AssetImage('asset/hello.png'),
+                                image: AssetImage('asset/mencuciTangan.png'),
                               ),
                             ),
                           )
@@ -179,41 +189,50 @@ class _MencegahState extends State<Mencegah> {
                             padding: const EdgeInsets.only(left: 16.0),
                             child: Column(
                               children: <Widget>[
-                                Text(
-                                  "MENJAGA JARAK AMAN",
-                                  style: TextStyle(
-                                    fontSize: 30,
-                                    color: Colors.orange,
-                                    fontWeight: FontWeight.bold,
+                                BorderedText(
+                                  strokeWidth: 5.0,
+                                  child: Text(
+                                    "MENJAGA JARAK AMAN",
+                                    style: TextStyle(
+                                      fontSize: 30,
+                                      color: Colors.yellowAccent,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
-                                Text(
-                                  "Selalu jaga jarak yang aman dengan orang",
-                                  style: TextStyle(
-                                    fontSize: 25,
-                                    color: Colors.white,
-                                    height: 1,
+                                BorderedText(
+                                  strokeWidth: 4.0,
+                                  child: Text(
+                                    "Selalu jaga jarak yang aman dengan orang",
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      color: Colors.white,
+                                      height: 1,
+                                    ),
+                                    textAlign: TextAlign.center,
                                   ),
-                                  textAlign: TextAlign.center,
                                 ),
-                                Text(
-                                  "yang batuk atau bersin. ",
-                                  style: TextStyle(
-                                    fontSize: 25,
-                                    color: Colors.white,
-                                    height: 1,
+                                BorderedText(
+                                  strokeWidth: 4.0,
+                                  child: Text(
+                                    "yang batuk atau bersin. ",
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      color: Colors.white,
+                                      height: 1,
+                                    ),
+                                    textAlign: TextAlign.center,
                                   ),
-                                  textAlign: TextAlign.center,
                                 ),
                               ],
                             ),
                           )),
                           Container(
-                            width: 200,
-                            height: 200,
+                            width: 150,
+                            height: 150,
                             child: ClipRect(
                               child: Image(
-                                image: AssetImage('asset/hello.png'),
+                                image: AssetImage('asset/jagaJarak.png'),
                               ),
                             ),
                           )
@@ -253,32 +272,38 @@ class _MencegahState extends State<Mencegah> {
                             padding: const EdgeInsets.only(left: 16.0),
                             child: Column(
                               children: <Widget>[
-                                Text(
-                                  "JANGAN MENYENTUH WAJAH",
-                                  style: TextStyle(
-                                    fontSize: 30,
-                                    color: Colors.orange,
-                                    fontWeight: FontWeight.bold,
+                                BorderedText(
+                                  strokeWidth: 5.0,
+                                  child: Text(
+                                    "JANGAN MENYENTUH WAJAH",
+                                    style: TextStyle(
+                                      fontSize: 30,
+                                      color: Colors.yellowAccent,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
-                                Text(
-                                  "Jangan sentuh mata, hidung, atau mulut Anda.",
-                                  style: TextStyle(
-                                    fontSize: 25,
-                                    color: Colors.white,
-                                    height: 1,
+                                BorderedText(
+                                  strokeWidth: 4.0,
+                                  child: Text(
+                                    "Jangan sentuh mata, hidung, atau mulut Anda.",
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      color: Colors.white,
+                                      height: 1,
+                                    ),
+                                    textAlign: TextAlign.center,
                                   ),
-                                  textAlign: TextAlign.center,
                                 ),
                               ],
                             ),
                           )),
                           Container(
-                            width: 200,
-                            height: 200,
+                            width: 150,
+                            height: 150,
                             child: ClipRect(
                               child: Image(
-                                image: AssetImage('asset/hello.png'),
+                                image: AssetImage('asset/menyentuhWajah.png'),
                               ),
                             ),
                           )
@@ -318,53 +343,62 @@ class _MencegahState extends State<Mencegah> {
                             padding: const EdgeInsets.only(left: 16.0),
                             child: Column(
                               children: <Widget>[
-                                Text(
-                                  "MENUTUP MULUT DENGAN SIKU",
-                                  style: TextStyle(
-                                    fontSize: 30,
-                                    color: Colors.orange,
-                                    fontWeight: FontWeight.bold,
+                                BorderedText(
+                                  strokeWidth: 5.0,
+                                  child: Text(
+                                    "MENUTUP MULUT DENGAN SIKU",
+                                    style: TextStyle(
+                                      fontSize: 30,
+                                      color: Colors.yellowAccent,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
-                                Text(
-                                  "Saat Anda batuk atau bersin,",
-                                  style: TextStyle(
-                                    fontSize: 25,
-                                    color: Colors.white,
-                                    height: 1,
+                                BorderedText(
+                                  strokeWidth: 4.0,
+                                  child: Text(
+                                    "Saat Anda batuk atau bersin,",
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      color: Colors.white,
+                                      height: 1,
+                                    ),
+                                    textAlign: TextAlign.center,
                                   ),
-                                  textAlign: TextAlign.center,
                                 ),
-                                Text(
-                                  "tutup mulut dan hidung dengan lengan anda",
-                                  style: TextStyle(
-                                    fontSize: 25,
-                                    color: Colors.white,
-                                    height: 1,
+                                BorderedText(
+                                  strokeWidth: 4.0,
+                                  child: Text(
+                                    "tutup mulut dan hidung dengan lengan anda",
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      color: Colors.white,
+                                      height: 1,
+                                    ),
+                                    textAlign: TextAlign.center,
                                   ),
-                                  textAlign: TextAlign.center,
                                 ),
-                                Text(
-                                  "atau tisu.",
-                                  style: TextStyle(
-                                    fontSize: 25,
-                                    color: Colors.white,
-                                    height: 1,
+                                BorderedText(
+                                  strokeWidth: 4.0,
+                                  child: Text(
+                                    "atau tisu.",
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      color: Colors.white,
+                                      height: 1,
+                                    ),
+                                    textAlign: TextAlign.center,
                                   ),
-                                  textAlign: TextAlign.center,
                                 ),
                               ],
                             ),
                           )),
-
-                          //-----------------------------------------------------------------
-
                           Container(
-                            width: 200,
-                            height: 200,
+                            width: 150,
+                            height: 150,
                             child: ClipRect(
                               child: Image(
-                                image: AssetImage('asset/hello.png'),
+                                image: AssetImage('asset/menutupMulut.png'),
                               ),
                             ),
                           )
@@ -404,59 +438,74 @@ class _MencegahState extends State<Mencegah> {
                             padding: const EdgeInsets.only(left: 16.0),
                             child: Column(
                               children: <Widget>[
-                                Text(
-                                  "TETAP DIRUMAH",
-                                  style: TextStyle(
-                                    fontSize: 30,
-                                    color: Colors.orange,
-                                    fontWeight: FontWeight.bold,
+                                BorderedText(
+                                  strokeWidth: 5.0,
+                                  child: Text(
+                                    "TETAP DIRUMAH",
+                                    style: TextStyle(
+                                      fontSize: 30,
+                                      color: Colors.yellowAccent,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
-                                Text(
-                                  "Tetaplah di rumah",
-                                  style: TextStyle(
-                                    fontSize: 25,
-                                    color: Colors.white,
-                                    height: 1,
+                                BorderedText(
+                                  strokeWidth: 4.0,
+                                  child: Text(
+                                    "Tetaplah di rumah",
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      color: Colors.white,
+                                      height: 1,
+                                    ),
+                                    textAlign: TextAlign.center,
                                   ),
-                                  textAlign: TextAlign.center,
                                 ),
-                                Text(
-                                  "jika Anda merasa tidak enak badan.",
-                                  style: TextStyle(
-                                    fontSize: 25,
-                                    color: Colors.white,
-                                    height: 1,
+                                BorderedText(
+                                  strokeWidth: 4.0,
+                                  child: Text(
+                                    "jika Anda merasa tidak enak badan.",
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      color: Colors.white,
+                                      height: 1,
+                                    ),
+                                    textAlign: TextAlign.center,
                                   ),
-                                  textAlign: TextAlign.center,
                                 ),
-                                Text(
-                                  "Jika Anda demam, batuk, atau kesulitan bernapas",
-                                  style: TextStyle(
-                                    fontSize: 25,
-                                    color: Colors.white,
-                                    height: 1,
+                                BorderedText(
+                                  strokeWidth: 4.0,
+                                  child: Text(
+                                    "Jika Anda demam, batuk, atau kesulitan bernapas",
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      color: Colors.white,
+                                      height: 1,
+                                    ),
+                                    textAlign: TextAlign.center,
                                   ),
-                                  textAlign: TextAlign.center,
                                 ),
-                                Text(
-                                  "segera hubungi medis.",
-                                  style: TextStyle(
-                                    fontSize: 25,
-                                    color: Colors.white,
-                                    height: 1,
+                                BorderedText(
+                                  strokeWidth: 4.0,
+                                  child: Text(
+                                    "segera hubungi medis.",
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      color: Colors.white,
+                                      height: 1,
+                                    ),
+                                    textAlign: TextAlign.center,
                                   ),
-                                  textAlign: TextAlign.center,
                                 ),
                               ],
                             ),
                           )),
                           Container(
-                            width: 200,
-                            height: 200,
+                            width: 150,
+                            height: 150,
                             child: ClipRect(
                               child: Image(
-                                image: AssetImage('asset/hello.png'),
+                                image: AssetImage('asset/tetapDirumah.png'),
                               ),
                             ),
                           )

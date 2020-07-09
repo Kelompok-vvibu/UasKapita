@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:uas_kapitaselekta/database/riwayat.dart';
 import 'package:uas_kapitaselekta/homepage.dart';
 
@@ -27,16 +28,20 @@ class Score extends StatelessWidget {
     return Column(
       children: <Widget>[
         Container(
-            padding: EdgeInsets.only(top: 200),
+            padding: EdgeInsets.only(top: 30),
             child: Center(
-              child: Text(totalScore),
+              child: Text(
+                totalScore,
+                style: GoogleFonts.russoOne(textStyle: TextStyle(fontSize: 20)),
+                textAlign: TextAlign.center,
+              ),
             )),
         RaisedButton(
-            child: Text("Copy"),
             onPressed: () {
               final data = ClipboardData(text: totalScore);
               Clipboard.setData(data);
-            }),
+            },
+            child: Text("Copy")),
         RaisedButton(
           onPressed: () {
             Navigator.pushReplacement(context,
@@ -44,19 +49,28 @@ class Score extends StatelessWidget {
               return HomePage();
             }));
           },
+          child: Text("Homepage"),
         ),
         Center(
-            child: Text(
-                "Klik Riwayat Untuk Menambahkan Data Hasil Test Untuk Memonitoring Diri Anda")),
+          child: Text(
+            "Klik Copy setelah itu Riwayat Untuk Menambahkan Data Hasil Test Untuk Memonitoring Diri Anda",
+            style: GoogleFonts.markaziText(textStyle: TextStyle(fontSize: 20)),
+            textAlign: TextAlign.center,
+          ),
+        ),
         RaisedButton(
           child: Text("Riwayat"),
           onPressed: () {
-            Navigator.pushReplacement(context,
-                MaterialPageRoute(builder: (context) {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
               return Riwayat();
             }));
           },
-        )
+        ),
+        Center(
+            child: Image.asset(
+          'asset/doctor.png',
+          width: 300,
+        ))
       ],
     );
   }
