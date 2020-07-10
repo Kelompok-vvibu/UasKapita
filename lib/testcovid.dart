@@ -28,7 +28,7 @@ class _TestCovidState extends State<TestCovid> {
   var _pertanyaan = [
     {
       'textPertanyaan':
-          'Apakah anda terdapat demam dengan suhu di ata 38 derajat Celcius?',
+          'Apakah anda terdapat demam dengan suhu di atas 38 derajat Celcius?',
       'textJawab': [
         {'teks': 'Iya', 'hasil': 20},
         {'teks': 'Tidak', 'hasil': 0}
