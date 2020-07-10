@@ -1,3 +1,4 @@
+import 'package:bordered_text/bordered_text.dart';
 import 'package:flutter/material.dart';
 import 'package:uas_kapitaselekta/caramencegah.dart';
 import 'package:uas_kapitaselekta/covid19.dart';
@@ -7,6 +8,7 @@ import 'package:http/http.dart' as http;
 import 'package:uas_kapitaselekta/protokol.dart';
 import 'package:uas_kapitaselekta/rujukan.dart';
 import 'package:uas_kapitaselekta/testcovid.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'covid19.dart';
 
@@ -35,6 +37,23 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     var divheight = MediaQuery.of(context).size.height;
     return Scaffold(
+      floatingActionButton: Column(
+        children: <Widget>[
+          SizedBox(
+            height: 40,
+          ),
+          FloatingActionButton(
+              child: BorderedText(
+                strokeWidth: 5,
+                child: Text(
+                  "199",
+                  style: TextStyle(fontWeight: FontWeight.w900),
+                ),
+              ),
+              backgroundColor: Colors.orange,
+              onPressed: () => launch("tel://199")),
+        ],
+      ),
       body: Stack(
         children: [
           Container(
@@ -60,7 +79,8 @@ class _HomePageState extends State<HomePage> {
                       Container(
                         decoration: BoxDecoration(
                           boxShadow: [
-                            BoxShadow(color: Colors.transparent, blurRadius: 10.0)
+                            BoxShadow(
+                                color: Colors.transparent, blurRadius: 10.0)
                           ],
                           color: Colors.transparent,
                           borderRadius: BorderRadius.only(
@@ -72,7 +92,6 @@ class _HomePageState extends State<HomePage> {
                         ),
                         height: divheight / 1 * 0.3,
                       ),
-
                       Container(
                         decoration: BoxDecoration(
                           color: Colors.black12,
@@ -113,10 +132,8 @@ class _HomePageState extends State<HomePage> {
                                                   color: Colors.white,
                                                   fontWeight: FontWeight.w700,
                                                   fontSize: 30));
-                                        } else if (snapshot.error) {
-                                          return Text("${snapshot.error}");
                                         }
-                                        return Container();
+                                        return CircularProgressIndicator();
                                       },
                                     ),
                                   ],
@@ -130,7 +147,10 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                     borderRadius: BorderRadius.circular(5),
                                     gradient: LinearGradient(
-                                        colors: [Colors.lightGreen, Colors.green],
+                                        colors: [
+                                          Colors.lightGreen,
+                                          Colors.green
+                                        ],
                                         begin: Alignment.topCenter,
                                         end: Alignment.bottomCenter)),
                                 height: 70,
@@ -152,10 +172,8 @@ class _HomePageState extends State<HomePage> {
                                                   color: Colors.white,
                                                   fontWeight: FontWeight.w700,
                                                   fontSize: 30));
-                                        } else if (snapshot.error) {
-                                          return Text("${snapshot.error}");
                                         }
-                                        return Container();
+                                        return CircularProgressIndicator();
                                       },
                                     ),
                                   ],
@@ -169,7 +187,10 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                     borderRadius: BorderRadius.circular(5),
                                     gradient: LinearGradient(
-                                        colors: [Colors.amberAccent, Colors.amber],
+                                        colors: [
+                                          Colors.amberAccent,
+                                          Colors.amber
+                                        ],
                                         begin: Alignment.topCenter,
                                         end: Alignment.bottomCenter)),
                                 height: 70,
@@ -191,10 +212,8 @@ class _HomePageState extends State<HomePage> {
                                                   color: Colors.white,
                                                   fontWeight: FontWeight.w700,
                                                   fontSize: 30));
-                                        } else if (snapshot.error) {
-                                          return Text("${snapshot.error}");
                                         }
-                                        return Container();
+                                        return CircularProgressIndicator();
                                       },
                                     ),
                                   ],
@@ -221,7 +240,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ),
                               Text(
-                                "Coronavirus atau virus corona merupakan keluarga besar virus yang menyebabkan infeksi saluran pernapasan atas ringan hingga sedang, seperti penyakit flu.",
+                                "Coronavirus atau virus corona merupakan keluarga besar virus yang menyebabkan infeksi saluran pernapasan atas ringan hingga sedang, seperti penyakit flu.\n \n Call Center Covid-19 : 199",
                                 style: TextStyle(
                                   fontSize: 15,
                                   color: Colors.white,
@@ -374,23 +393,15 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
 
-
-
                 //container baru
-
-
-
               ],
             ),
-
           ),
           Positioned(
             bottom: 1,
             child: Material(
               borderRadius: BorderRadius.circular(20),
-
               child: Container(
-
                 height: 70,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
@@ -412,8 +423,8 @@ class _HomePageState extends State<HomePage> {
                     onTap: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                            return TestCovid();
-                          }));
+                        return TestCovid();
+                      }));
                     },
                     child: Center(
                       child: Text('Test Covid - 19',

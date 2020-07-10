@@ -50,8 +50,8 @@ class _TestCovidState extends State<TestCovid> {
       ]
     },
     {
-      'textPertanyaan':
-          'apa terdapat riwayat kontak(Misalnya: berjabat tangan, mengobrol lama, berada dalam satu ruangan) dengan orang yang sudah diyatakan positif terinfeksi virus Corona?',
+      'textPertanyaan': 'apa terdapat riwayat kontak'
+          '(Misalnya: berjabat tangan, mengobrol lama, berada dalam satu ruangan) dengan orang yang sudah diyatakan positif terinfeksi virus Corona?',
       'textJawab': [
         {'teks': 'Iya', 'hasil': 20},
         {'teks': 'Tidak', 'hasil': 0}
@@ -71,7 +71,7 @@ class _TestCovidState extends State<TestCovid> {
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
-            title: Text("Test Covid-19"),
+            title: Text(" "),
           ),
           body: Container(
             width: MediaQuery.of(context).size.width,
@@ -89,6 +89,9 @@ class _TestCovidState extends State<TestCovid> {
               ],
             )),
             child: ListView(children: <Widget>[
+              Image(
+                image: AssetImage('asset/testCovid19.png'),
+              ),
               _pertanyaanIndex < _pertanyaan.length
                   ? Test(
                       klikJawaban: _klikJawaban,

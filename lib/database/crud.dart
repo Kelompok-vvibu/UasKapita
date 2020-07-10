@@ -26,8 +26,7 @@ class CRUD {
 
   Future<List<DataHasil>> getHasilanList() async {
     Database db = await dbHelper.initDb();
-    List<Map<String, dynamic>> mapList =
-        await db.query('hasilan', orderBy: 'dbHasil');
+    List<Map<String, dynamic>> mapList = await db.query('hasilan');
     int count = mapList.length;
     List<DataHasil> hasilanList = List<DataHasil>();
     for (int i = 0; i < count; i++) {

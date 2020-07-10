@@ -1,3 +1,4 @@
+import 'package:bordered_text/bordered_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -28,7 +29,8 @@ class Score extends StatelessWidget {
     return Column(
       children: <Widget>[
         Container(
-            padding: EdgeInsets.only(top: 30),
+            color: Colors.white,
+            padding: EdgeInsets.all(30),
             child: Center(
               child: Text(
                 totalScore,
@@ -36,12 +38,22 @@ class Score extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             )),
-        RaisedButton(
-            onPressed: () {
-              final data = ClipboardData(text: totalScore);
-              Clipboard.setData(data);
-            },
-            child: Text("Copy")),
+        Container(
+          width: MediaQuery.of(context).size.width,
+          height: 40,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.all(
+              Radius.circular(10),
+            ),
+          ),
+          child: RaisedButton(
+              onPressed: () {
+                final data = ClipboardData(text: totalScore);
+                Clipboard.setData(data);
+              },
+              child: Text("Copy")),
+        ),
         RaisedButton(
           onPressed: () {
             Navigator.pushReplacement(context,
@@ -52,25 +64,29 @@ class Score extends StatelessWidget {
           child: Text("Homepage"),
         ),
         Center(
-          child: Text(
-            "Klik Copy setelah itu Riwayat Untuk Menambahkan Data Hasil Test Untuk Memonitoring Diri Anda",
-            style: GoogleFonts.markaziText(textStyle: TextStyle(fontSize: 20)),
-            textAlign: TextAlign.center,
+          child: BorderedText(
+            strokeWidth: 3.0,
+            child: Text(
+              "Klik Copy setelah itu Riwayat Untuk Menambahkan Data Hasil Test Untuk Memonitoring Diri Anda",
+              style: GoogleFonts.markaziText(
+                  textStyle:
+                      TextStyle(fontSize: 25, color: Colors.yellowAccent)),
+              textAlign: TextAlign.center,
+            ),
           ),
         ),
         RaisedButton(
-          child: Text("Riwayat"),
+          child: Text(" Riwayat "),
           onPressed: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) {
               return Riwayat();
             }));
           },
         ),
-        Center(
-            child: Image.asset(
+        Image.asset(
           'asset/doctor.png',
-          width: 300,
-        ))
+          width: 200,
+        )
       ],
     );
   }

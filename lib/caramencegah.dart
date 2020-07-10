@@ -10,7 +10,6 @@ class _MencegahState extends State<Mencegah> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
@@ -510,6 +509,39 @@ class _MencegahState extends State<Mencegah> {
                             ),
                           )
                         ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(
+                  top: 10.0, right: 20.0, bottom: 10.0, left: 20.0),
+              width: MediaQuery.of(context).size.width,
+              height: 40,
+              decoration: BoxDecoration(
+                color: Colors.blueAccent,
+                borderRadius: BorderRadius.all(
+                  Radius.circular(10),
+                ),
+              ),
+              child: Material(
+                color: Colors.white12,
+                borderRadius: BorderRadius.circular(20),
+                child: InkWell(
+                  splashColor: Colors.orangeAccent,
+                  borderRadius: BorderRadius.circular(20),
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Center(
+                    child: Text(
+                      'Saya mengerti',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
                       ),
                     ),
                   ),

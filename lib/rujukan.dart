@@ -31,6 +31,10 @@ class _RujukanState extends State<Rujukan> {
         ),
         child: ListView(
           children: <Widget>[
+            Image(
+              image: AssetImage('asset/rumahRujukan.png'),
+            ),
+
             //rumah sakit pertama
             Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -87,10 +91,11 @@ class _RujukanState extends State<Rujukan> {
                               //ganti nama Rumah sakit sesuai google map
                               child: Center(
                                   child: Text(
-                                      "RSUD dr. Chasbullah Abdulmajid Kota Bekasi",
+                                      "RSUD DR. CHASBULLAH ABDULMAJID KOTA BEKASI",
+                                      textAlign: TextAlign.center,
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: 15,
+                                          fontSize: 20,
                                           fontWeight: FontWeight.w700))),
                             )),
                       ),
@@ -181,7 +186,7 @@ class _RujukanState extends State<Rujukan> {
                               },
                               //ganti nama Rumah sakit sesuai google map
                               child: Center(
-                                  child: Text("RSUD Bantar gebang",
+                                  child: Text("RSUD BANTAR GEBANG",
                                       style: TextStyle(
                                           color: Colors.white,
                                           fontSize: 20,
@@ -237,40 +242,68 @@ class _RujukanState extends State<Rujukan> {
                       ),
                     ),
                   ),
-                  
                 ]),
-                Container(width: 150,
-                  height:150,
-                    child: Image.asset('asset/call2.png', width: 100)),
-                    Container(
-                      child: Text("Call Center", textAlign: TextAlign.center)
-                    ),
-                    Row(mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        FlatButton(
-              onPressed: () => launch("tel://112"),
-              child: new Text("112")),
-              FlatButton(
-              onPressed: () => launch("tel://119"),
-              child: new Text("199")),
-                      ],
-                    ),
-                    Container(
-                      child: Text("hotline Pusat Informasi dan Koordinasi Covid-19 Kabupaten Bekasi (PIKOKABSI)", textAlign: TextAlign.center)
-                    ),
-                    Row(mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[FlatButton(
-              onPressed: () => launch("tel://02189910039"),
-              child: new Text("02189910039")),
-              FlatButton(
-              onPressed: () => launch("tel://08111139927"),
-              child: new Text("08111139927")),
-              FlatButton(
-              onPressed: () => launch("tel://085283980119"),
-              child: new Text("085283980119")),
-                      
-                    ],
-                    )
+
+            Container(
+                width: 150,
+                height: 150,
+                child: Image.asset('asset/call2.png', width: 100)),
+
+            Container(
+                color: Colors.white,
+                child: Text(
+                  "Konsultasi Call Center",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                )),
+
+            Container(
+              color: Colors.white70,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  FlatButton(
+                      onPressed: () => launch("tel://112"),
+                      child: new Text("112")),
+                  FlatButton(
+                      onPressed: () => launch("tel://119"),
+                      child: new Text("199")),
+                ],
+              ),
+            ),
+            Container(
+                color: Colors.white,
+                child: Text(
+                    "hotline Pusat Informasi dan Koordinasi Covid-19 Kabupaten Bekasi (PIKOKABSI)",
+                    textAlign: TextAlign.center)),
+            Container(
+              color: Colors.white,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  FlatButton(
+                      textColor: Colors.black,
+                      padding: EdgeInsets.all(8.0),
+                      splashColor: Colors.white,
+                      onPressed: () => launch("tel://02189910039"),
+                      child: new Text("02189910039")),
+                  FlatButton(
+                      textColor: Colors.black,
+                      padding: EdgeInsets.all(8.0),
+                      splashColor: Colors.white,
+                      onPressed: () => launch("tel://08111139927"),
+                      child: new Text("08111139927")),
+                  FlatButton(
+                      textColor: Colors.black,
+                      padding: EdgeInsets.all(8.0),
+                      splashColor: Colors.white,
+                      onPressed: () => launch("tel://085283980119"),
+                      child: new Text("085283980119")),
+                ],
+              ),
+            ),
           ],
         ),
       ),
